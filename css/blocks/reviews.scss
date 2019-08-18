@@ -32,7 +32,7 @@
     right: 0;
     bottom: 0;
     background: rgba(#444646, .5);
-    padding: 50px 19px 19px;
+    padding: 45px 19px 19px;
     opacity: 0;
     filter: grayscale(100%);
     transition: opacity .3s;
@@ -40,9 +40,14 @@
 
 .reviews__title {
     @include gagalin;
+    font-size: 14px;
+    margin-bottom: 19px;
 }
 
 .reviews__text {
     @include ubuntu;
     font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 13px;
 }

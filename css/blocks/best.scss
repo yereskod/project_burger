@@ -2,6 +2,10 @@
     background: url('./../images/bg.png') center center / cover no-repeat;
 }
 
+.title__best {
+    margin-bottom: 25px;
+}
+
 .best__list {
     display: flex;
 }
@@ -17,17 +21,18 @@
 }
 
 .best__picture {
-    margin-bottom: 34px;
+    margin-bottom: 15px;
 }
 
 .best__title {
     font-size: 24px;
-    margin-bottom: 33px;
+    margin-bottom: 20px;
     @include lifehack;
 }
 
 .best__desc-text {
     @include ubuntu;
     font-weight: 300;
+    font-size: 14px;
 }
 
