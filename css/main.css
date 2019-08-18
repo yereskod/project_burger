@@ -518,6 +518,8 @@ p {
   color: #fff;
   font-size: 13px;
   text-transform: uppercase; }
+  .nav__link:hover {
+    opacity: .8; }
 
 .btn {
   padding: 10px 14px;
@@ -531,6 +533,8 @@ p {
   font-weight: 300;
   font-weight: 500;
   font-weight: bold; }
+  .btn:hover {
+    opacity: .9; }
 
 .title {
   font-size: 72px;
