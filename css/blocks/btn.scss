@@ -9,7 +9,8 @@
     @include ubuntu;
 
     &:hover {
-        opacity: .9;
+        background-color: #c1401e;
+        transition: background-color .3s;
     }
 }
 
