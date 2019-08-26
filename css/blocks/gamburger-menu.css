@@ -1,0 +1,6 @@
+.hamburger-menu {
+  background: #fff;
+  width: rem(24px);
+  height: rem(5px);
+  border-radius: rem(3px); 
+}

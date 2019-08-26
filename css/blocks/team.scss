@@ -1,0 +1,129 @@
+.team {
+    background: url('./../images/bg-team.png') center center / cover no-repeat;
+    align-items: flex-end;
+    color: #fff;
+    position: relative;
+}
+
+.team-acco {
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.team__section {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: #2f3234;
+    opacity: 0.93;
+    padding: 5% 2% 0 7%;
+
+    @include tablets {
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.team-acco__item {
+    align-items: center;
+    @include gagalin;
+    font-size: rem(14px);
+    line-height: rem(28px);
+    margin-left: rem(10px);
+    margin-bottom: rem(35px);
+}
+
+.team-acco__item-active .team-acco__content {
+    display: flex;
+}
+
+.team-acco__content {
+    display: none;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.team-acco__pic {
+	text-align: center;
+    width: 30%;
+    margin-right: rem(20px);
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.team-acco__img {
+	@include inlineblock();
+	width: rem(100px);
+	height: rem(100px);
+	@include cover;
+	border-radius: 50%;
+}
+
+.team-acco__button{
+    color: #fff;
+	font-size: rem(14px);
+	text-decoration: none;
+	position: relative;
+	display: block;
+    margin-bottom: rem(20px);
+    
+    @include tablets {
+        display: inline-flex;
+    }
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: rem(-18px);
+		top: rem(8px);
+		width: 0;
+    	height: 0;
+	}
+
+	&:before {
+		border-top: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-bottom: rem(0px) solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+
+	&:after {
+		display: none;
+		border-bottom: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-top: rem(0px) solid transparent;
+    }
+}
+
+.team-acco__item-active .team-acco__button {
+    &:before {
+        transform: rotate(-180deg);
+    }
+}
+
+.team-acco__text {
+    @include ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.team-acco__title {
+    @include ubuntu
+}

@@ -1,9 +1,13 @@
 .title {
-    font-size: 72px;
+    font-size: rem(72px);
     color: $yellow;
-    margin-bottom: 26px;
+    margin-bottom: rem(26px);
     line-height: 1;
     @include gagalin;
+
+    @include phones {
+        font-size: rem(63px);
+    }
 
 
     &--color {

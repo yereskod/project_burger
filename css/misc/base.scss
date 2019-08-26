@@ -1,9 +1,21 @@
+html {
+    font-size: 16px;
+
+    @include tablets {
+        font-size: 15px;
+    }
+
+    @include phones {
+        font-size: 14px;
+    }
+}
+
 html, body {
     height: 100%;
 }
 
 body {
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -12,10 +24,10 @@ body {
 }
 
 .wrapper {
-    overflow: hidden;
+    position: relative;
+    width: 100%;
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
 }
 
 .wrapper__content {
@@ -23,7 +35,9 @@ body {
 }
 
 .container {
-    width: 940px;
+    position: relative;
+    width: 95%;
+    max-width: rem(940px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -43,6 +57,7 @@ button {
     border: none;
     background: transparent;
     cursor: pointer;
+    color: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {

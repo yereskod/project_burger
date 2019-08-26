@@ -1,0 +1,35 @@
+.hamburger-menu {
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    margin-left: rem(30px);
+    display: none;
+
+    @include tablets {
+        display: flex;
+    }
+}
+
+.hamburger-menu__bars {
+    &, &:before, &:after {
+    background: #fff;
+	width: rem(24px);
+	height: rem(5px);
+    border-radius: rem(3px);
+    margin-bottom: rem(8px);
+    }
+
+    &:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+
+	&:before {
+        top: rem(8px);
+	}
+
+	&:after {
+		bottom: rem(8px);
+	}
+}

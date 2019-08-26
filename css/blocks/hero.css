@@ -15,15 +15,15 @@
   -webkit-box-flex: .8;
   -ms-flex: .8;
   flex: .8;
-  padding-bottom: 25px;
-  padding-left: 16px; }
+  padding-bottom: rem(25px);
+  padding-left: rem(16px); }
 
 .hero__desc {
-  padding-top: 48px;
-  margin-left: 13px; }
+  padding-top: rem(48px);
+  margin-left: rem(13px); }
 
 .hero__subtitle {
-  font-size: 62px;
+  font-size: rem(62px);
   color: #fff;
   line-height: 1;
   font-family: 'Lifehack-Medium'; }
