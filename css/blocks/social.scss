@@ -3,6 +3,17 @@
 }
 
 .social__item {
-    margin-right: rem(20px);
     width: rem(20px);
+    height: rem(20px);
+    margin-right: rem(20px);
+}
+
+.social__icon {
+    width: rem(20px);
+    height: rem(20px);
+    opacity: .3;
+
+    &:hover {
+        opacity: 1;
+    }
 }

@@ -14,3 +14,8 @@
     }
 }
 
+.btn-mobile {
+    @include tablets {
+        margin-right: rem(90px);
+    }
+}

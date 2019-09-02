@@ -24,7 +24,7 @@
 .menu-acco__button {
 	display: flex;
 	justify-content: center;
-    min-width: rem(80px);
+    width: rem(80px);
     height: 100%;
     background-size: cover;
 	background-position: center center;
@@ -33,6 +33,10 @@
     position: relative;
 	color: inherit;
 	padding-bottom: rem(40px);
+
+	@include phones {
+		width: 4rem;
+	}
 }
 
 .menu-acco__button-text {
@@ -49,12 +53,11 @@
 .menu-acco__content {
 	background: rgba(#2f3234, .93);
 	overflow: hidden;
-	width: 0;
-	transition: width .3s;
+	max-width: 0;
+	transition: max-width .3s;
 }
 
 .menu-acco__item.active .menu-acco__content {
-	width: rem(541px);
 	max-width: rem(541px);
 
 	@include tablets {

@@ -1,0 +1,47 @@
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown__block {
+    position: absolute;
+    background-color: rgba($white, .9);
+    border-radius: rem(5px);
+    width: rem(255px);
+    height: rem(300px);
+    margin-left: rem(90px);
+    padding: rem(15px) 0;
+    left: rem(-9999px);
+}
+
+.ingredients__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: rem(10px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ingredients__logo {
+    width: rem(40px);
+    height: rem(37px);
+}
+
+.ingredients__title {
+    @include ubuntu;
+    font-size: rem(14px);
+    font-weight: 500;
+    line-height: rem(24px);
+    color: #2f3234;
+}
+
+.ingredients__weight {
+    @include ubuntu;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+    color: #2f3234;
+}

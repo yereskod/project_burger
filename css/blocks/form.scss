@@ -13,6 +13,10 @@
 
 .title--order {
     margin-bottom: rem(40px);
+
+    @include phones {
+        margin-bottom: rem(10px);
+    }
 }
 
 .form__column {
@@ -111,6 +115,7 @@
 
 .form__radio-button {
     -webkit-appearance: none;
+    margin-right: rem(24px);
 
     &:checked + .form__radio-fake:before {
         background-color: #e35028;
@@ -118,6 +123,7 @@
 }
 
 .form__radio-fake {
+    position: absolute;
     width: rem(15px);
     height: rem(15px);
     background-color: #ffffff;
@@ -125,7 +131,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: rem(10px);
 
     &:before {
     content: '';
@@ -147,6 +152,7 @@
 
 .form__call-button {
     -webkit-appearance: none;
+    margin-right: rem(24px);
 
     &:checked + .form__call-fake:before {
         display: block;
@@ -154,6 +160,7 @@
 }
 
 .form__call-fake {
+    position: absolute;
     border: rem(1px);
     width: rem(15px);
     height: rem(15px);
