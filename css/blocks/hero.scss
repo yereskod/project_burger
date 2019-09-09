@@ -8,9 +8,12 @@
 }
 
 .logo-icon {
+    position: absolute;
+    top: 12px;
     width: rem(92px);
     height: rem(69px);
     margin-right: rem(10px);
+    z-index: 5;
 }
 
 .hero__content {

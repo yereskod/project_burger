@@ -9,7 +9,19 @@
     flex-direction: row;
 }
 
-.burgers__btn {
+.slider {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+}
+
+.burgers__slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider__prev, .slider__next {
     display: flex;
 }
 
@@ -21,10 +33,13 @@
 
 .burgers__col {
     display: flex;
+    position: relative;
+    transition: .3s;
 }
 
 .slide {
     display: flex;
+    width: rem(858px);
 
     @include tablets {
         flex-direction: column;
@@ -38,6 +53,17 @@
     @include tablets {
         width: 100%;
         text-align: center;
+    }
+}
+
+.dropdown {
+    @include tablets {
+        left: rem(40px);
+    }
+
+    @include phones {
+        left: rem(-35px);
+        top: rem(-30px);
     }
 }
 
@@ -81,10 +107,16 @@
 
 .burgers__kkal {
     position: absolute;
+    bottom: rem(81px);
 
     @include tablets {
      top: 0;
      right: rem(150px);   
+    }
+
+    @include phones {
+        top: rem(-25px);
+        right: rem(60px);
     }
 }
 

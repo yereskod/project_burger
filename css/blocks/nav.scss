@@ -19,8 +19,8 @@
             text-align: center;
             font-size: rem(24px);
             font-weight: 400;
-            line-height: rem(40px);
-            padding: 25% 0;
+            line-height: rem(60px);
+            padding: 20% 0;
         }
 
         .nav__item {
@@ -72,6 +72,10 @@
     color: #fff;
     font-size: rem(13px);
     text-transform: uppercase;
+
+    @include tablets {
+        font-size: rem(24px);
+    }
 
     &:hover {
         opacity: .8;

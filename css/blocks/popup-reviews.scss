@@ -1,0 +1,46 @@
+.popup-reviews {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($gray, 0.9);
+  align-items: center;
+  justify-content: center;
+  color: $gray;
+
+  &__content {
+    width: rem(460px);
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: rem(20px);
+    color: $gray;
+    font-weight: 300;
+    line-height: rem(24px);
+    position: relative;
+  }
+
+  &__title {
+    color: $gray;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(28.11px);
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-family: Ubuntu;
+    font-size: rem(14px);
+  }
+
+  .close__icon {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: rem(15px); 
+    right: rem(15px);
+    width: rem(18px);
+    height: rem(18px);
+  }
+}

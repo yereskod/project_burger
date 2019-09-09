@@ -5,9 +5,18 @@
     position: relative;
 }
 
+.title-team {
+    margin-bottom: rem(50px);
+}
+
 .team-acco {
+    width: rem(350px);
+    display: flex;
+    flex-direction: column;
+
     @include tablets {
-        text-align: center;
+        align-items: center;
+        height: rem(350px);
     }
 }
 
@@ -32,20 +41,44 @@
 }
 
 .team-acco__item {
-    align-items: center;
     @include gagalin;
     font-size: rem(14px);
     line-height: rem(28px);
     margin-left: rem(10px);
     margin-bottom: rem(35px);
-}
 
-.team-acco__item-active .team-acco__content {
-    display: flex;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablets {
+        text-align: center;
+    }
+
+    &--active .team-acco__button {
+        color: $yellow;
+    }
+
+    &--active .team-acco__content {
+        display: flex;
+        height: 100%;
+        opacity: 1;
+        transition: .3s;
+        
+    }
+
+    &--active .team-acco__button {
+        &:before {
+            transform: rotate(-180deg);
+        }
+    }
 }
 
 .team-acco__content {
-    display: none;
+    /*display: none;*/
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
 
     @include tablets {
         flex-direction: column;
@@ -81,9 +114,11 @@
     
     @include tablets {
         display: inline-flex;
+        font-size: rem(25px);
+        line-height: rem(29px);
     }
 
-	&:before, &:after {
+	&:before {
 		content: "";
 		display: block;
 		position: absolute;
@@ -99,22 +134,9 @@
 		border-right: rem(5px) solid transparent;
 		border-bottom: rem(0px) solid transparent;
 		transform: rotate(0deg);
-		transition: .3s;
+        transition: .3s;
+        margin-top: 4px;
 	}
-
-	&:after {
-		display: none;
-		border-bottom: rem(7px) solid $yellow;
-		border-left: rem(5px) solid transparent;
-		border-right: rem(5px) solid transparent;
-		border-top: rem(0px) solid transparent;
-    }
-}
-
-.team-acco__item-active .team-acco__button {
-    &:before {
-        transform: rotate(-180deg);
-    }
 }
 
 .team-acco__text {

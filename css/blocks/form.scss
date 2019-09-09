@@ -183,11 +183,11 @@
     }
 }
 
-.order__btn {
+.btn-order {
     margin-right: rem(20px);
 }
 
-.form__clear {
+.btn-reset {
     @include ubuntu;
     font-weight: 300;
     font-size: rem(14px);
