@@ -11,7 +11,8 @@
   color: $gray;
 
   &__content {
-    width: rem(460px);
+    min-width: rem(460px);
+    max-width: 95%;
     background-color: #ffffff;
     border-radius: 5px;
     padding: rem(20px);
