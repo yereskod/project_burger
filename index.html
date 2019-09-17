@@ -11,8 +11,8 @@
 
 <body>
   <div class="wrapper">
-    <div class="maincontent">
-      <section class="section section--non-centered hero">
+    <main class="maincontent">
+      <section id="first" class="section section--non-centered hero">
         <div class="container hero__container">
           <header class="header">
             <a href="#" class="logo">
@@ -822,8 +822,40 @@
         </ul>
       </section>
 
-      <section id="how-work" class="section how-work">
-        <div class="title title--color--black">Как мы работаем</div>
+      <section id="how" class="section how-work">
+        <div class="container how__container">
+          <div class="title title--color--black">Как мы работаем</div>
+          <div class="video">
+            <video src="./video/Infiniti.mp4" class="video__display" poster="./images/player.png"></video>
+            <div class="video__controlls">
+              <button class="video__controlls-play">
+                <svg alt="Смотреть видео" class="video__controlls-play-play">
+                  <use xlink:href="./svg/sprite.svg#play"></use>
+                </svg>
+                <svg alt="Смотреть видео" class="video__controlls-play-pause">
+                  <use xlink:href="./svg/sprite.svg#pause"></use>
+                </svg>
+              </button>
+              <div class="video__controlls-bar video__controlls-bar--progress">
+                <div class="video__controlls-circle video__controlls-circle--progress"></div>
+              </div>
+              <button class="video__controlls-volume">
+                <svg alt="Смотреть видео" class="video__controlls-volume-img">
+                  <use xlink:href="./svg/sprite.svg#volume"></use>
+                </svg>
+              </button>
+              <div class="video__controlls-bar video__controlls-bar--volume">
+                <div class="video__controlls-circle video__controlls-circle--volume"></div>
+              </div>
+            </div>
+            <div class="video__playbtn">
+              <svg alt="Смотреть видео" class="video__playbtn-img">
+                <use xlink:href="./svg/sprite.svg#play"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <section id="order" class="section order">
@@ -904,6 +936,7 @@
       </section>
 
       <section id="contacts" class="section contacts">
+        <div class="map" id="map"></div>
         <footer class="footer">
           <div class="container footer__container">
             <div class="footer__col">
@@ -919,28 +952,28 @@
                 <li class="social__item">
                   <a href="#" class="social__link">
                     <svg class="social__icon">
-                      <use xlink:href="svg/sprite.svg#vk"></use>
+                      <use xlink:href="./svg/sprite.svg#vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link">
                     <svg class="social__icon">
-                      <use xlink:href="svg/sprite.svg#fb"></use>
+                      <use xlink:href="./svg/sprite.svg#fb"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link">
                     <svg class="social__icon">
-                      <use xlink:href="svg/sprite.svg#inst"></use>
+                      <use xlink:href="./svg/sprite.svg#inst"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link">
                     <svg class="social__icon">
-                      <use xlink:href="svg/sprite.svg#tw"></use>
+                      <use xlink:href="./svg/sprite.svg#tw"></use>
                     </svg>
                   </a>
                 </li>
@@ -950,7 +983,7 @@
 
         </footer>
       </section>
-    </div>
+    </main>
   </div>
 
   <a href="#" class="hamburger-menu">
@@ -961,35 +994,37 @@
     </div>
   </a>
 
-  <ul class="fixed-menu">
-    <li class="fixed-menu__item fixed-menu__item--active">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-    <li class="fixed-menu__item">
-      <button type="button" class="fixed-menu__dot"></button>
-    </li>
-  </ul>
+  <div class="fixed-menu">
+    <ul class="fixed-menu__list">
+      <li class="fixed-menu__item active">
+        <a href="#first" class="fixed-menu__link" data-scroll-to='0'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#best" class="fixed-menu__link" data-scroll-to='1'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#burgers" class="fixed-menu__link" data-scroll-to='2'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#team" class="fixed-menu__link" data-scroll-to='3'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#menu" class="fixed-menu__link" data-scroll-to='4'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#reviews" class="fixed-menu__link" data-scroll-to='5'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#how" class="fixed-menu__link" data-scroll-to='6'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#order" class="fixed-menu__link" data-scroll-to='7'></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="#contacts" class="fixed-menu__link" data-scroll-to='8'></a>
+      </li>
+    </ul>
+  </div>
 
   <div class="popup-reviews">
     <div class="popup-reviews__content">
@@ -1003,12 +1038,19 @@
     </div>
   </div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3ed851d6-7149-4ad7-b8f6-686ad3475b6f&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/fullscreen-menu.js"></script>
   <script src="./js/accordeon-team.js"></script>
   <script src="./js/accordeon-menu.js"></script>
+  <script src="./js/player.js"></script>
   <script src="./js/form.js"></script>
+  <script src="./js/map.js"></script>
   <script src="./js/modal-reviews.js"></script>
+  <script src="./js/onepagescroll.js"></script>
 
 </body>
 

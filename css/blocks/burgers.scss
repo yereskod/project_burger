@@ -35,11 +35,12 @@
     display: flex;
     position: relative;
     transition: .3s;
+    min-width: 100%;
 }
 
 .slide {
     display: flex;
-    width: rem(858px);
+    min-width: 100%;
 
     @include tablets {
         flex-direction: column;

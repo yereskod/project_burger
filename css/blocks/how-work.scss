@@ -1,3 +1,111 @@
 .how-work {
     background: url('./../images/bg-how-work.png') center center / cover no-repeat;
 }
+
+.how__container {
+    justify-content: center;
+    align-items: center;
+
+    @include tablets {
+      max-width: rem(741px);
+    }
+
+    @include phones {
+      max-width: rem(441px);
+    }
+}
+
+.video {
+    width: 660px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  
+    &__display {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    &__controlls {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #3e3e3e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      &-play {
+        &-play {
+          display: block;
+          fill: #626262;
+          width: 16px;
+          height: 22px;
+        }
+  
+        &-pause {
+          display: none;
+          fill: #626262;
+          width: 16px;
+          height: 22px;
+        }
+      }
+  
+      &-bar {
+        height: 4px;
+        border-radius: 1px;
+        background-color: #626262;
+        cursor: pointer;
+  
+        &--progress {
+          width: 444px;
+        }
+  
+        &--volume {
+          width: 58px;
+        }
+      }
+  
+      &-circle {
+        position: relative;
+        width: 13px;
+        height: 13px;
+        background-color: #626262;
+        border-radius: 50%;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+  
+      &-volume {
+  
+        &-img {
+          fill: #626262;
+          width: 18px;
+          height: 22px;
+        }
+      }
+    }
+  
+    &__playbtn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0.9;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+  
+      &-img {
+        fill: #fff;
+        width: 82px;
+        height: 118px;
+      }
+    }
+  }
