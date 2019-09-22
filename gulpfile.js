@@ -62,7 +62,7 @@ task("styles", () => {
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(px2rem())
+    //.pipe(px2rem())
     .pipe(gulpif(env === "dev",
       autoprefixer({
         overrideBrowserslist: ["last 2 versions"],
@@ -72,11 +72,11 @@ task("styles", () => {
     .pipe(gulpif(env === "prod", gcmq()))
     .pipe(gulpif(env === "prod", cleanCSS()))
     .pipe(gulpif(env === "dev", sourcemaps.write()))
-    .pipe(dest("dist"))
+    .pipe(dest("dist/styles"))
     .pipe(reload({ stream: true }));
 });
 
-const libs = ["node_modules/jquery/dist/jquery.js", "src/scripts/*.js"]
+const libs = ["node_modules/jquery/dist/jquery.js", "node_modules/mobile-detect/mobile-detect.js", "node_modules/jquery-touchswipe/jquery.touchSwipe.js", "src/scripts/*.js"]
 
 task("scripts", () => {
   return src(libs)
@@ -98,7 +98,7 @@ task("icons", () => {
       plugins: [
         {
           removeAttrs: {
-            attrs: "(fill|stroke|style|width|height|data.*)"
+          //  attrs: "(style|width|height|data.*)"
           }
         }
       ]
