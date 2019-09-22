@@ -1672,6 +1672,9 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 480px) {
+    .burgers__ingredients {
+      left: 2.5rem; } }
   .burgers__ingredients:hover {
     background-color: #e45028; }
   .burgers__ingredients:hover + .dropdown__block {
@@ -1799,10 +1802,24 @@ p {
   @media screen and (max-width: 480px) {
     .how__container {
       max-width: 27.5625rem; } }
+  .how__container .title {
+    font-family: 'Gagalin-Regular';
+    font-size: 3.8125rem; }
+    @media screen and (max-width: 768px) {
+      .how__container .title {
+        font-size: 4.5rem; } }
+    @media screen and (max-width: 480px) {
+      .how__container .title {
+        font-size: 3.125rem;
+        line-height: 3.75rem;
+        padding: 0 1.875rem;
+        text-align: center; } }
 
 .video {
-  min-width: 65%;
-  min-height: 318%;
+  margin-top: 3.125rem;
+  width: 95%;
+  max-width: 41.25rem;
+  height: 23.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1813,55 +1830,69 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  background: #000; }
   @media screen and (max-width: 768px) {
     .video {
-      min-height: 275%; } }
+      width: 100%;
+      max-width: 45rem;
+      height: 25.4375rem; } }
+  @media screen and (max-width: 480px) {
+    .video {
+      width: 100%;
+      max-width: 28.75rem;
+      height: 15.875rem; } }
   .video__display {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 110%; }
+    min-height: 100%; }
   .video__controlls {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background-color: #3e3e3e;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .video__controlls-play-play {
-      display: block;
-      fill: #626262;
-      width: 16px;
-      height: 22px; }
-    .video__controlls-play-pause {
-      display: none;
-      fill: #626262;
-      width: 16px;
-      height: 22px; }
+    .video__controlls-play {
+      outline: transparent; }
+      .video__controlls-play-play {
+        display: block;
+        fill: #626262;
+        width: 1rem;
+        height: 1.375rem;
+        margin-right: 1.25rem; }
+      .video__controlls-play-pause {
+        display: none;
+        fill: #626262;
+        width: 1rem;
+        height: 1.375rem;
+        margin-right: 1.25rem; }
     .video__controlls-bar {
-      height: 4px;
+      height: 0.25rem;
       border-radius: 1px;
       background-color: #626262;
       cursor: pointer; }
       .video__controlls-bar--progress {
-        width: 444px; }
+        -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+        flex-grow: 5;
+        margin-right: 1.25rem; }
       .video__controlls-bar--volume {
-        width: 58px; }
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1; }
     .video__controlls-circle {
       position: relative;
-      width: 13px;
-      height: 13px;
+      width: 0.8125rem;
+      height: 0.8125rem;
       background-color: #626262;
       border-radius: 50%;
       top: 50%;
@@ -1870,10 +1901,13 @@ p {
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       cursor: pointer; }
-    .video__controlls-volume-img {
-      fill: #626262;
-      width: 18px;
-      height: 22px; }
+    .video__controlls-volume {
+      outline: transparent; }
+      .video__controlls-volume-img {
+        fill: #626262;
+        width: 1.125rem;
+        height: 1.375rem;
+        margin-right: 1.25rem; }
   .video__playbtn {
     position: absolute;
     top: 50%;
@@ -1885,8 +1919,8 @@ p {
     cursor: pointer; }
     .video__playbtn-img {
       fill: #fff;
-      width: 82px;
-      height: 118px; }
+      width: 5.125rem;
+      height: 7.375rem; }
 
 /*.contacts {
     background: url('./../images/map.png') center center / cover no-repeat;

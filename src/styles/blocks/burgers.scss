@@ -88,6 +88,10 @@
     align-items: center;
     justify-content: center;
 
+    @include phones {
+        left: rem(40px);
+    }
+
     &:hover {
         background-color: $orange;
     }
